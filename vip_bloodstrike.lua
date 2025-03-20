@@ -1,16 +1,3 @@
-local url = "https://raw.githubusercontent.com/username/LoginData/main/accounts.txt" -- Ganti dengan URL GitHub Anda
-
--- Fungsi mengambil data akun dari GitHub
-function fetchAccounts()
-    local response = gg.makeRequest(url)
-    if response and response.content then
-        return response.content
-    else
-        gg.alert("⚠️ Koneksi internet diperlukan!")
-        os.exit()
-    end
-end
-
 -- Fungsi konversi tanggal ke timestamp
 function toTimestamp(dateString)
     local year, month, day = dateString:match("(%d+)-(%d+)-(%d+)")
